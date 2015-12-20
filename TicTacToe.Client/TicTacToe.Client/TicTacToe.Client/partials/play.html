@@ -1,0 +1,37 @@
+﻿<div class="panel panel-warning" ng-show="vm.loggedinOne" id="userDetailsOne">
+    <div class="panel-heading">
+        <h3 class="panel-title">Player One: {{vm.playerOne.userName}}</h3>
+    </div>
+    <div class="panel-body">
+        Currency: {{vm.playerOne.currency | currency}}
+        <a href="#/login" ng-show="!vm.loggedinTwo" class="btn btn-info btn-xs pull-right">Log in second player</a>
+        <a href="#/home" class="btn btn-info btn-sm pull-right" ng-click="vm.logoutPlayerOne()">Log out</a>
+    </div>
+</div>
+
+<div class="panel panel-success" ng-show="vm.loggedinTwo" id="userDetailsTwo">
+    <div class="panel-heading">
+        <h3 class="panel-title">Player Two: {{vm.playerTwo.userName}}</h3>
+    </div>
+    <div class="panel-body">
+        Currency: {{vm.playerTwo.currency | currency}}
+        <a href="#/home" class="btn btn-info btn-sm pull-right" ng-click="vm.logoutPlayerTwo()">Log out</a>
+    </div>
+</div>
+<div id="game-wrapper" ng-click="vm.registerClick($event)" ng-init="vm.animateGame()">
+    <div class="btn-group btn-group-justified">
+        <a id="1" class="btn btn-default">{{vm.symbol1 ? vm.symbol1 : '?'}}</a>
+        <a id="2" class="btn btn-default">{{vm.symbol2 ? vm.symbol2 : '?'}}</a>
+        <a id="3" class="btn btn-default">{{vm.symbol3 ? vm.symbol3 : '?'}}</a>
+    </div>
+    <div class="btn-group btn-group-justified">
+        <a id="4" class="btn btn-default">{{vm.symbol4 ? vm.symbol4 : '?'}}</a>
+        <a id="5" class="btn btn-default">{{vm.symbol5 ? vm.symbol5 : '?'}}</a>
+        <a id="6" class="btn btn-default">{{vm.symbol6 ? vm.symbol6 : '?'}}</a>
+    </div>
+    <div class="btn-group btn-group-justified">
+        <a id="7" class="btn btn-default">{{vm.symbol7 ? vm.symbol7 : '?'}}</a>
+        <a id="8" class="btn btn-default">{{vm.symbol8 ? vm.symbol8 : '?'}}</a>
+        <a id="9" class="btn btn-default">{{vm.symbol9 ? vm.symbol9 : '?'}}</a>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+﻿<ul class="list-group col-lg-4" id="bestPlayers" ng-init="vm.animShow()">
+    <li class="list-group-item" ng-repeat="player in vm.players | orderBy: player.currency">
+        <span class="badge">{{player.currency | currency}}</span>
+        {{player.userName}}
+    </li>
+</ul>

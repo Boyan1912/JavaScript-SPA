@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tic Tac Toe Game</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/toastr.css" />
+    <link type="text/css" rel="stylesheet" href="styles/animate.css" />
+    <link type="text/css" rel="stylesheet" href="styles/custom.css" />
+
+
+    <script src="Scripts/libs/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/libs/bootstrap.js"></script>
+    <script src="Scripts/libs/toastr.js"></script>
+    <script src="Scripts/libs/angular.js"></script>
+    <script src="Scripts/libs/angular-route.js"></script>
+    <script src="Scripts/libs/angular-resource.js"></script>
+
+</head>
+<body ng-app="TicTacToeApp" ng-cloak>
+    <nav class="navbar navbar-inverse" ng-controller="MainController as vm">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#/best" ng-click="vm.animate($event, 'rollIn')">Hall of Fame</a></li>
+            </ul>
+            <div class="navbar-header alert-success">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/" ng-mouseenter="vm.animate($event, 'flip')">Tic Tac Toe</a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" >(^:^)<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#/play"><span ng-mouseenter="vm.animate($event, 'rubberBand')">Play Game Now</span></a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/login" ng-mouseenter="vm.animate($event, 'bounceIn')">Login</a></li>
+                    <li><a href="#/register" ng-mouseenter="vm.animate($event, 'bounceIn')">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" ng-view>
+
+
+    </div>
+
+
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="text-center"><span>Tic Tac Toe 2015</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Scripts/app/app.js"></script>
+    <script src="Scripts/app/services/animationService.js"></script>
+    <script src="Scripts/app/services/serverRequestsService.js"></script>
+    <script src="Scripts/app/directives/animateSlideInRight.js"></script>
+    <script src="Scripts/app/controllers/HomeController.js"></script>
+    <script src="Scripts/app/controllers/RegisterController.js"></script>
+    <script src="Scripts/app/controllers/MainController.js"></script>
+    <script src="Scripts/app/controllers/LoginController.js"></script>
+    <script src="Scripts/app/controllers/GameController.js"></script>
+    <script src="Scripts/app/controllers/BestController.js"></script>
+
+</body>
+</html>

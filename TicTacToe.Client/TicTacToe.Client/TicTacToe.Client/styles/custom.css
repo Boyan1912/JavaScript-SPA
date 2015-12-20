@@ -1,0 +1,43 @@
+﻿.navbar-header{
+    padding-left:15px;
+}
+
+body {
+    background-image: url("../images/bg-picture.png");
+    background-size:cover;
+    min-height:1000px;
+    position:relative;
+}
+
+footer{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+}
+
+#title {
+    color: red;
+   -moz-animation-duration: 5s;
+  -moz-animation-delay: 0.5s;
+  -moz-animation-iteration-count: infinite;
+    -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+div#userDetailsOne {
+    position: absolute;
+    top:0px;
+    right:0px;
+    width:25%;
+}
+div#userDetailsTwo {
+    position: fixed;
+    top:100px;
+    right:0px;
+    width:25%;
+}
+div#game-wrapper.ng-scope {
+    margin-top:200px;
+    width: 75%;
+}
